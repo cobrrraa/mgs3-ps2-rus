@@ -1,0 +1,29 @@
+# Whitelist: only code, docs and own translation files are published.
+# Game images, extracted game data, the PC game, the russifier, emulator files and build
+# output stay local (they belong to Konami / the russifier authors, or are generated).
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/LICENSE
+!/tools/
+!/docs/
+
+!/work/
+/work/*
+!/work/subs/
+/work/subs/*
+!/work/subs/translations_new.json
+!/work/subs/edits.json
+!/work/subs/vox_edits.json
+!/work/subs/vox_auto.json
+!/work/gcx/
+/work/gcx/*
+!/work/gcx/gcx_manual.json
+!/work/gcx/gcx_short_manual.json
+!/work/codec/
+/work/codec/*
+!/work/codec/codec_manual.json
+
+__pycache__/
+*.pyc
