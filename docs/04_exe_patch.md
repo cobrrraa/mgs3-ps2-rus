@@ -2,7 +2,9 @@
 
 **Статус: работает, проверено в PCSX2 (24.10.2026).** Коды 0x82–0xFF выводятся глифами основного
 шрифта, `81 xx` — по-прежнему кана/значки кнопок, `80 7C` — перенос строки. Скриншот:
-`work/charset_test_patched2.png`.
+[charset_test_patched2.png](img/charset_test_patched2.png).
+
+![Однобайтовые коды после патча](img/charset_test_patched2.png)
 
 ## Как устроен SLUS_209.15
 
