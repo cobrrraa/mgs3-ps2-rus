@@ -11,12 +11,27 @@
 
 Проверено в PCSX2 2.8 и на реальной PS2 (OPL).
 
-| Кодек | Окно снаряжения (L2) |
-|---|---|
-| ![Первый звонок Майора](docs/img/codec_first_call.jpg) | ![Описание активного сонара](docs/img/r2_window.jpg) |
+## Скриншоты
 
-Субтитры катсцены в самолёте: [часть 1](docs/img/ru_final_0.png), [часть 2](docs/img/ru_final_1.png),
-[часть 3](docs/img/ru_final_2.png).
+| Катсцены (DEMO.DAT) | Видеоролики (MOVIE.DAT) |
+|---|---|
+| ![Майор Том в самолёте](docs/img/cutscene.jpg) | ![Хроника о Карибском кризисе](docs/img/movie.jpg) |
+| **Реплики во время игры (VOX.DAT)** | **Экран гибели (VOX.DAT)** |
+| ![Переговоры охраны](docs/img/vox_guards.jpg) | ![Снейк! Отвечай!](docs/img/game_over.jpg) |
+| **Кодек (CODEC.DAT)** | **Главное меню (GCX)** |
+| ![Первый звонок Майора](docs/img/codec_first_call.jpg) | ![Подсказка в главном меню](docs/img/menu_main.jpg) |
+| **Новая игра: вопрос (GCX)** | **Новая игра: сложность (GCX)** |
+| ![Играю в МГС впервые](docs/img/menu_question.jpg) | ![Выбор сложности](docs/img/menu_difficulty.jpg) |
+| **Меню паузы (GCX)** | **Еда (GCX)** |
+| ![Survival Viewer](docs/img/pause_menu.jpg) | ![Calorie Mate](docs/img/food_menu.jpg) |
+| **Окно оружия R2 (резидентный GCX)** | **Окно снаряжения L2 (резидентный GCX)** |
+| ![Нож выживания](docs/img/weapon_window.jpg) | ![Активный сонар](docs/img/r2_window.jpg) |
+| **Настройки (GCX)** | |
+| ![Подсказка в настройках](docs/img/options.jpg) | |
+
+Надписи на текстурах (MAIN MENU, OPTIONS, названия пунктов и предметов на иконках) оставлены
+английскими сознательно. Все субтитры сцены в самолёте: [часть 1](docs/img/ru_final_0.png),
+[часть 2](docs/img/ru_final_1.png), [часть 3](docs/img/ru_final_2.png).
 
 ---
 
