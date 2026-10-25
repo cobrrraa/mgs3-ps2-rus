@@ -1,5 +1,7 @@
 # Субтитры DEMO/VOX: извлечение и таблица соответствия (этап 2)
 
+> Документ написан по ходу работы и сохраняет ход рассуждений. Где план или предположение устарели, ниже стоит блок **«Итог»**. Итоговое состояние перевода — в `README.md`.
+
 ## Результат
 
 **Таблица:** `work/subs/subs_ps2_ru.csv` (UTF-8 с BOM, разделитель `;` — открывается в Excel).
@@ -45,15 +47,22 @@
   только корректно обновить поле размера в заголовке.
 - Отдельно нужно решить кодировку кириллицы (байты 0x80+ на PS2; `0x80` уже занят под перенос строки).
 
+> **Итог:** DEMO и MOVIE — записи раскладываются заново внутри своего блока (меняется только поле
+> размера записей), не влезшие реплики сокращены (`work/subs/edits.json`); VOX — то же с учётом пар
+> записей lang 1/lang 7 и «хвостов» блока, плюс автосокращения. Все 119 сцен, 19 роликов и 3490 блоков
+> VOX вставлены — `05_font_and_subs_insert.md`. Кодировка — `03_font_encoding.md`, `04_exe_patch.md`.
+
 ## Как пересобрать таблицу
 
+Сейчас эти шаги (кроме отчётов `review_subs.py` и `run_fit.py`) выполняет `tools/prepare.py`.
+
 ```
-python -I tools/ps2_subs.py "games/Metal Gear Solid 3 - Snake Eater.iso" work/subs/ps2_en.jsonl
-python -I tools/pc_subs.py "<ПК>/MGS3" MGS3_rus work/subs/pc_en_ru.jsonl
-python -I tools/make_overrides.py work/subs/pc_en_ru.jsonl work/subs/overrides.json
-python -I tools/match_subs.py work/subs/ps2_en.jsonl work/subs/pc_en_ru.jsonl work/subs/subs_ps2_ru.csv work/subs/overrides.json
-python -I tools/review_subs.py work/subs/subs_ps2_ru.csv work/subs/pc_en_ru.jsonl work/subs/review.txt
-python -I tools/run_fit.py work/subs/subs_ps2_ru.csv
+python -E tools/ps2_subs.py "games/Metal Gear Solid 3 - Snake Eater.iso" work/subs/ps2_en.jsonl
+python -E tools/pc_subs.py "<ПК>/MGS3" MGS3_rus work/subs/pc_en_ru.jsonl
+python -E tools/make_overrides.py work/subs/pc_en_ru.jsonl work/subs/overrides.json
+python -E tools/match_subs.py work/subs/ps2_en.jsonl work/subs/pc_en_ru.jsonl work/subs/subs_ps2_ru.csv work/subs/overrides.json
+python -E tools/review_subs.py work/subs/subs_ps2_ru.csv work/subs/pc_en_ru.jsonl work/subs/review.txt
+python -E tools/run_fit.py work/subs/subs_ps2_ru.csv
 ```
 
 Отчёт для ручной проверки: `work/subs/review.txt` (слабые совпадения, разные варианты перевода, самые длинные строки).
